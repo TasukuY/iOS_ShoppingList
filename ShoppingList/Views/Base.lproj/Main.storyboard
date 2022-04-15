@@ -34,14 +34,14 @@
                                                     </constraints>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal">
-                                                        <imageReference key="image" image="square" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                                        <imageReference key="image" image="checkmark.square" catalog="system" symbolScale="large" renderingMode="hierarchical">
                                                             <hierarchicalColors>
                                                                 <color systemColor="labelColor"/>
-                                                                <color systemColor="secondaryLabelColor"/>
-                                                                <color systemColor="tertiaryLabelColor"/>
+                                                                <color systemColor="labelColor"/>
+                                                                <color systemColor="labelColor"/>
                                                             </hierarchicalColors>
                                                         </imageReference>
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="default" weight="medium"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="large" weight="medium"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="checkBoxTapped:" destination="ihs-Pt-yME" eventType="touchUpInside" id="S2E-RZ-n1A"/>
@@ -76,7 +76,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Shopping List" id="2gD-Zb-OE9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="w42-hm-xm7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="w42-hm-xm7">
+                            <connections>
+                                <action selector="addItemButtonTapped:" destination="5p3-Vu-exQ" id="fa0-Ws-jfU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X95-mg-mGr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -101,18 +105,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square" catalog="system" width="128" height="114"/>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

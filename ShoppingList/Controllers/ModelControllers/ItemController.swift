@@ -11,8 +11,8 @@ class ItemController{
     //MARK: - Properties
     static let shared = ItemController()
     var shoppingList: [Item] = []
-    var alreadyBoughtItems: [Item] = []
-    var allLists: [[Item]] = []
+//    var alreadyBoughtItems: [Item] = []
+//    var allLists: [[Item]] = []
     
     //MARK: - CRUD funcs
     func createList(with name: String, quantity: Int){
@@ -21,7 +21,10 @@ class ItemController{
         saveDataToPersistenceStore()
     }
     
-    func updateList(with item: Item){}
+    func bought(item: Item){
+        item.isBought = !item.isBought
+        saveDataToPersistenceStore()
+    }
     
     func delete(item: Item){
         guard let index = shoppingList.firstIndex(of: item) else { return }
